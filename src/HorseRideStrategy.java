@@ -1,4 +1,3 @@
-// HorseRideStrategy.java
 public class HorseRideStrategy implements MovementStrategy {
     @Override
     public void move(String from, String to) {

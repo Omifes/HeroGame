@@ -1,4 +1,3 @@
-// TeleportStrategy.java
 public class TeleportStrategy implements MovementStrategy {
     @Override
     public void move(String from, String to) {

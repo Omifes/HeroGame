@@ -1,4 +1,3 @@
-// HeroGame.java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +19,12 @@ public class HeroGame {
     }
 
     public void start() {
-        System.out.println("=== GAME: HERO MOVEMENT CHOICE ===");
+        System.out.println("GAME: HERO MOVEMENT CHOICE");
         System.out.println("Pattern: Strategy\n");
 
-        String heroName = UserInput.getStringInput("Enter your hero's name: ");
-        hero = new Hero(heroName);
-        System.out.println("Hero " + heroName + " created! Default movement: walking\n");
+
+        hero = new Hero();
+        System.out.println("Default movement: walking\n");
 
         boolean running = true;
 
@@ -51,7 +50,7 @@ public class HeroGame {
                     break;
                 case 6:
                     running = false;
-                    System.out.println("Exiting game...");
+                    System.out.println("Exiting game");
                     break;
             }
 
@@ -64,25 +63,22 @@ public class HeroGame {
     }
 
     private void printMenu() {
-        System.out.println("=== MAIN MENU ===");
+        System.out.println("MAIN MENU");
         System.out.println("1. Show current status");
         System.out.println("2. Change movement method");
         System.out.println("3. Move hero");
         System.out.println("4. Show available locations");
         System.out.println("5. Show movement options");
         System.out.println("6. Exit game");
-        System.out.println("================");
     }
 
     private void showCurrentStatus() {
-        System.out.println("\n=== CURRENT STATUS ===");
-        System.out.println("Hero: " + hero.getName());
+        System.out.println("\nCURRENT STATUS");
         System.out.println("Movement method: " + hero.getCurrentMovementType());
-        System.out.println("=====================");
     }
 
     private void changeMovementStrategy() {
-        System.out.println("\n=== MOVEMENT METHOD SELECTION ===");
+        System.out.println("\nMOVEMENT METHOD SELECTION");
         System.out.println("1. Walk");
         System.out.println("2. Ride horse");
         System.out.println("3. Fly");
@@ -101,7 +97,7 @@ public class HeroGame {
     }
 
     private void moveHero() {
-        System.out.println("\n=== HERO MOVEMENT ===");
+        System.out.println("\nHERO MOVEMENT");
 
         System.out.println("Available locations:");
         for (int i = 0; i < locations.length; i++) {
@@ -125,20 +121,18 @@ public class HeroGame {
     }
 
     private void showAvailableLocations() {
-        System.out.println("\n=== AVAILABLE LOCATIONS ===");
+        System.out.println("\nAVAILABLE LOCATIONS");
         for (int i = 0; i < locations.length; i++) {
             System.out.println((i + 1) + ". " + locations[i]);
         }
-        System.out.println("==========================");
     }
 
     private void showMovementOptions() {
-        System.out.println("\n=== MOVEMENT OPTIONS ===");
-        System.out.println("1. Walk - slow, but free");
-        System.out.println("2. Horse ride - faster, requires a horse");
-        System.out.println("3. Flight - very fast, requires mana");
-        System.out.println("4. Teleportation - instant, high mana cost");
-        System.out.println("========================");
+        System.out.println("\nMOVEMENT OPTIONS");
+        System.out.println("1. Walk");
+        System.out.println("2. Horse ride");
+        System.out.println("3. Flight");
+        System.out.println("4. Teleportation\n");
     }
 
     public static void main(String[] args) {

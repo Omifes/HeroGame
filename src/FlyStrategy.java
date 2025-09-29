@@ -1,4 +1,3 @@
-// FlyStrategy.java
 public class FlyStrategy implements MovementStrategy {
     @Override
     public void move(String from, String to) {
