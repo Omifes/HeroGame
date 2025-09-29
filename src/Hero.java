@@ -2,7 +2,7 @@ public class Hero {
     private MovementStrategy movementStrategy;
 
     public Hero() {
-        this.movementStrategy = new WalkStrategy(); // способ по умолчанию
+        this.movementStrategy = new WalkStrategy();
     }
 
     public Hero(MovementStrategy movementStrategy) {
